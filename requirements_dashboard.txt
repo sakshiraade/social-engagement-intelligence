@@ -1,9 +1,4 @@
+streamlit
 pandas
 numpy
 plotly
-streamlit
-scikit-learn
-xgboost
-shap
-matplotlib
-seaborn
