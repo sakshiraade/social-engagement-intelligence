@@ -19,9 +19,9 @@ st.set_page_config(
 # ─────────────────────────────
 @st.cache_data  # Caches data so it doesn't reload every time
 def load_data():
-    df = pd.read_csv('../data/processed/user_experiment_data_clean.csv')
-    preds = pd.read_csv('../data/processed/churn_predictions.csv')
-    return df, preds
+    df = pd.read_csv('data/processed/user_experiment_data_clean.csv')
+    preds = pd.read_csv('data/processed/churn_predictions.csv')
+    return df, preds    
 
 df, preds = load_data()
 
@@ -105,7 +105,7 @@ elif page == "🔮 Churn Risk Monitor":
     fig.add_vline(x=0.6, line_dash='dash', annotation_text='High Risk Threshold')
     st.plotly_chart(fig, use_container_width=True)
     
-    st.image('../reports/shap_importance_bar.png', caption='SHAP Feature Importance')
+    st.image('reports/shap_importance_bar.png', caption='SHAP Feature Importance')
 
 # ─────────────────────────────
 # Page 4: Content Intelligence
@@ -113,10 +113,10 @@ elif page == "🔮 Churn Risk Monitor":
 elif page == "💬 Content Intelligence":
     st.title("💬 Content Intelligence — NLP Insights")
     
-    st.image('../reports/nlp_sentiment.png', caption='Sentiment Analysis by Feed Type')
+    st.image('reports/nlp_sentiment.png', caption='Sentiment Analysis by Feed Type')
     
     st.subheader("📰 AI-Generated Weekly Trend Summary")
-    with open('../reports/weekly_trend_summary.txt', 'r') as f:
+    with open('reports/weekly_trend_summary.txt', 'r') as f:
         st.info(f.read())
 
 
