@@ -8,7 +8,7 @@
 ---
 
 ## 🔗 Live Dashboard
-👉 **[View the deployed dashboard here]()**
+👉 **[View the deployed dashboard here](https://social-engagement-intelligence.streamlit.app/)**
 
 ---
 
